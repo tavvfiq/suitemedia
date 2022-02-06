@@ -10,6 +10,16 @@ test('UserListView renders correctly', () => {
   const showOverlay = () => {};
   const showModal = () => {};
   const showBottomsheet = () => {};
-  const view = render(<DemoView counter={counter} increase={increase} decrease={decrease} navigateToCounter2={navigateToCounter2} showOverlay={showOverlay} showModal={showModal} showBottomsheet={showBottomsheet}/>).toJSON();
+  const view = render(
+    <DemoView
+      counter={counter}
+      increase={increase}
+      decrease={decrease}
+      navigateToCounter2={navigateToCounter2}
+      showOverlay={showOverlay}
+      showModal={showModal}
+      showBottomsheet={showBottomsheet}
+    />,
+  ).toJSON();
   expect(view).toMatchSnapshot();
-})
+});

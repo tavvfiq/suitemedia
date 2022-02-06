@@ -6,28 +6,39 @@ import TextInput from '~common/view/component/TextInput';
 import Button from '~common/view/component/Button';
 
 type Props = {
-  checkOnPress: () => void;
-  nextOnPress: () => void;
+  checkOnPress: (text: string) => void;
+  nextOnPress: (text: string) => void;
 };
 
 const LoginView = ({ checkOnPress, nextOnPress }: Props) => {
+  let palindromeText = React.useRef('').current;
+
+  const onPalindromeChangeText = function (text: string) {
+    palindromeText = text;
+  };
+
   return (
     <View style={styles.container}>
       <Image source={images.bg_login} style={styles.imageBackground} />
-      <CircleAvatar customContainerStyle={styles.avatar} />
+      <CircleAvatar size="medium" customContainerStyle={styles.avatar} />
       <TextInput placeholder="Name" customContainerStyle={styles.textInput} />
       <TextInput
+        onChangeText={onPalindromeChangeText}
         placeholder="Palindrome"
         customContainerStyle={styles.textInput}
       />
       <Button
         label="CHECK"
-        onPress={checkOnPress}
+        onPress={() => {
+          checkOnPress(palindromeText);
+        }}
         customContainerStyle={styles.button}
       />
       <Button
         label="NEXT"
-        onPress={nextOnPress}
+        onPress={() => {
+          nextOnPress('');
+        }}
         customContainerStyle={styles.button}
       />
     </View>

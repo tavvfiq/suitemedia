@@ -3,6 +3,7 @@ import {
   StyleSheet,
   TextInput as RNTextInput,
   ViewStyle,
+  TextInputProps,
 } from 'react-native';
 import React from 'react';
 import { scaleWidth } from '~core/themes/mixins';
@@ -12,7 +13,7 @@ import { TITLE_H3 } from '~core/themes/typography';
 type Props = {
   placeholder?: string;
   customContainerStyle?: ViewStyle;
-};
+} & TextInputProps;
 
 const TextInput = ({
   placeholder = '',
@@ -22,6 +23,7 @@ const TextInput = ({
   return (
     <View style={[styles.container, customContainerStyle]}>
       <RNTextInput
+        style={styles.textInput}
         placeholderTextColor={INACTIVE_TEXT}
         placeholder={placeholder}
         {...rest}
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
   textInput: {
     ...TITLE_H3,
     color: TEXT_BLACK,
-    padding: 0,
+    paddingHorizontal: 0,
     margin: 0,
   },
 });
