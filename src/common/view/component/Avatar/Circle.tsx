@@ -12,7 +12,7 @@ import { scaleWidth } from '~core/themes/mixins';
 type Props = {
   image?: string;
   customContainerStyle?: ViewStyle;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'xsmall' | 'small' | 'medium' | 'large';
 };
 
 const Circle = ({ image, customContainerStyle, size }: Props) => {
@@ -25,6 +25,8 @@ const Circle = ({ image, customContainerStyle, size }: Props) => {
 
   const containerStyle = useMemo(() => {
     switch (size) {
+      case 'xsmall':
+        return styles.xsmall;
       case 'small':
         return styles.small;
       case 'medium':
@@ -51,6 +53,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  xsmall: {
+    width: scaleWidth(49),
+    height: scaleWidth(49),
+    borderRadius: scaleWidth(49 / 2),
+  },
   small: {
     width: scaleWidth(78),
     height: scaleWidth(78),
@@ -62,8 +69,8 @@ const styles = StyleSheet.create({
     borderRadius: scaleWidth(116 / 2),
   },
   large: {
-    width: scaleWidth(154),
-    height: scaleWidth(154),
+    width: scaleWidth(164),
+    height: scaleWidth(164),
     borderRadius: scaleWidth(154 / 2),
   },
 });

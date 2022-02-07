@@ -29,6 +29,7 @@ export const BORDER_GREY12 = '#C0C0C0';
 export const BORDER_GREY13 = '#6D6D6D';
 export const BORDER_GREY14 = '#D2D2D2';
 export const BORDER_GREY15 = '#B6B6B6';
+export const BORDER_GREY16 = '#E2E3E4';
 
 export const STATUSBAR_RED = '#B20007';
 
@@ -42,7 +43,7 @@ export const TEXT_COLOR = '#484C57';
 export const TEXT_BLACK = '#5B5B5B';
 export const INACTIVE_TEXT = 'rgba(104, 103, 119, 0.36)';
 export const BLUE_HARD = '#2A3447';
-export const TEXT_GRAY1 = '#333333';
+export const TEXT_GRAY1 = '#808080';
 export const TEXT_OTHER_GRAY = '#8C8C8C';
 export const TEXT_GRAY3 = '#828282';
 export const TEXT_GRAY4 = '#848484';

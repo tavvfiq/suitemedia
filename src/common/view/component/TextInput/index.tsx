@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
     color: TEXT_BLACK,
     paddingHorizontal: 0,
     margin: 0,
+    textAlignVertical: 'center',
+    includeFontPadding: false,
   },
 });
 

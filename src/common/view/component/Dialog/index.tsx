@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import Button from '../Button';
 import { COLOR_WHITE, TEXT_COLOR } from '~core/themes/colors';
-import { LABEL_SEMIBOLD, TITLE3_BOLD } from '~core/themes/typography';
+import { LABEL_REGULAR, TITLE3_BOLD } from '~core/themes/typography';
 
 type Props = {
   yesLabel: string;
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   desc: {
-    ...LABEL_SEMIBOLD,
+    ...LABEL_REGULAR,
     color: TEXT_COLOR,
   },
   buttonContainer: {

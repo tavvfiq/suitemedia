@@ -1,9 +1,14 @@
 import React from 'react';
-import { NavigationFunctionComponent } from 'react-native-navigation';
+import {
+  Layout,
+  Navigation,
+  NavigationFunctionComponent,
+} from 'react-native-navigation';
 import Screen from '~common/interface/screen';
 import Dialog from '~common/view/component/Dialog';
 import { reverseString } from '~core/utils/string';
 import { Modal } from '~core/view/modal';
+import { HomeLayout } from '~features/user/view/screen/Home/HomeViewController';
 import LoginView from './LoginView';
 
 const LoginViewController: NavigationFunctionComponent = ({ componentId }) => {
@@ -13,11 +18,11 @@ const LoginViewController: NavigationFunctionComponent = ({ componentId }) => {
   };
 
   const checkOnPress = function (text: string) {
-    let desc = '';
+    let desc = `${text} is `;
     if (checkPalindrome(text)) {
-      desc = 'Palindrome';
+      desc = desc + 'palindrome';
     } else {
-      desc = 'Not palindrome';
+      desc = desc + 'not palindrome';
     }
     Modal.open({
       renderContent: closeThisModal => {
@@ -35,7 +40,9 @@ const LoginViewController: NavigationFunctionComponent = ({ componentId }) => {
     });
   };
 
-  const nextOnPress = function (text: string) {};
+  const nextOnPress = function (text: string) {
+    Navigation.push(componentId, HomeLayout({ name: text }));
+  };
 
   return <LoginView checkOnPress={checkOnPress} nextOnPress={nextOnPress} />;
 };
@@ -57,6 +64,13 @@ const Login: Screen = {
   name: 'Login',
   component: LoginViewController,
   isTab: false,
+};
+
+export const LoginLayout: Layout = {
+  component: {
+    name: Login.name,
+    id: Login.id,
+  },
 };
 
 export default Login;

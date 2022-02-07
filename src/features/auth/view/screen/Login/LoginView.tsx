@@ -11,17 +11,26 @@ type Props = {
 };
 
 const LoginView = ({ checkOnPress, nextOnPress }: Props) => {
+  let name = React.useRef('').current;
   let palindromeText = React.useRef('').current;
 
   const onPalindromeChangeText = function (text: string) {
     palindromeText = text;
   };
 
+  const onNameChangeText = function (text: string) {
+    name = text;
+  };
+
   return (
     <View style={styles.container}>
       <Image source={images.bg_login} style={styles.imageBackground} />
       <CircleAvatar size="medium" customContainerStyle={styles.avatar} />
-      <TextInput placeholder="Name" customContainerStyle={styles.textInput} />
+      <TextInput
+        onChangeText={onNameChangeText}
+        placeholder="Name"
+        customContainerStyle={styles.textInput}
+      />
       <TextInput
         onChangeText={onPalindromeChangeText}
         placeholder="Palindrome"
@@ -37,7 +46,7 @@ const LoginView = ({ checkOnPress, nextOnPress }: Props) => {
       <Button
         label="NEXT"
         onPress={() => {
-          nextOnPress('');
+          nextOnPress(name);
         }}
         customContainerStyle={styles.button}
       />

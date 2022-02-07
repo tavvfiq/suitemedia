@@ -1,6 +1,6 @@
 import { ViewAnimationOptions } from 'react-native-navigation';
 
-export const TRANSITION_ANIMATION_DURATION = 300;
+export const TRANSITION_ANIMATION_DURATION = 200;
 
 export const SlideInLeft: ViewAnimationOptions = {
   translationX: {

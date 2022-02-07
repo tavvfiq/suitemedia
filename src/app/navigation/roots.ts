@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation';
+import { LoginLayout } from '~features/auth/view/screen/Login/LoginViewController';
 import tabs from './bottomTabs';
-import stacks from './stack';
 
 export function setRootBottomTabs() {
   Navigation.setRoot({
@@ -18,7 +18,11 @@ export function setRootStack() {
     root: {
       stack: {
         id: 'STACK_VIEW',
-        children: stacks,
+        children: [
+          {
+            ...LoginLayout,
+          },
+        ],
       },
     },
   });

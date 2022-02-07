@@ -16,51 +16,6 @@ export const XSMALL_BOLD = {
   fontFamily: 'Poppins-Bold',
 };
 
-export const SMALL_REGULAR = {
-  fontSize: scaleFont(10),
-  fontFamily: 'Nunito-Regular',
-};
-
-export const SMALL_SEMIBOLD = {
-  fontSize: scaleFont(10),
-  fontFamily: 'Nunito-Semibold',
-};
-
-export const SMALL_BOLD = {
-  fontSize: scaleFont(10),
-  fontFamily: 'Nunito-Bold',
-};
-
-export const CAPTION_REGULAR = {
-  fontSize: scaleFont(12),
-  fontFamily: 'Nunito-Regular',
-};
-
-export const CAPTION_SEMIBOLD = {
-  fontSize: scaleFont(12),
-  fontFamily: 'Nunito-Semibold',
-};
-
-export const CAPTION_BOLD = {
-  fontSize: scaleFont(12),
-  fontFamily: 'Nunito-Bold',
-};
-
-export const BODY_REGULAR = {
-  fontSize: scaleFont(13),
-  fontFamily: 'Nunito-Regular',
-};
-
-export const BODY_SEMIBOLD = {
-  fontSize: scaleFont(13),
-  fontFamily: 'Nunito-SemiBold',
-};
-
-export const BODY_BOLD = {
-  fontSize: scaleFont(13),
-  fontFamily: 'Nunito-Bold',
-};
-
 export const TITLE1_REGULAR = {
   fontSize: scaleFont(14),
   fontFamily: 'Poppins-Regular',
@@ -156,21 +111,6 @@ export const MENU_TABBAR = {
   fontFamily: 'Poppins-SemiBold',
 };
 
-export const BUTTON_TEXT_SMALL_REGULAR = {
-  fontSize: scaleFont(14),
-  fontFamily: 'Nunito-Regular',
-};
-
-export const BUTTON_TEXT_SMALL_SEMIBOLD = {
-  fontSize: scaleFont(14),
-  fontFamily: 'Nunito-SemiBold',
-};
-
-export const BUTTON_TEXT_SMALL_BOLD = {
-  fontSize: scaleFont(14),
-  fontFamily: 'Nunito-Bold',
-};
-
 export const AVATAR_TEXT_REGULAR = {
   fontSize: scaleFont(20),
   fontFamily: 'Poppins-Regular',
@@ -220,28 +160,54 @@ export const LABEL_REGULAR = {
   fontSize: scaleFont(14),
   fontFamily: 'Poppins-Regular',
   lineHeight: scaleFont(21),
+  includeFontPadding: false,
 };
 
 export const LABEL_SEMIBOLD = {
   fontSize: scaleFont(14),
   fontFamily: 'Poppins-SemiBold',
   lineHeight: scaleFont(21),
+  includeFontPadding: false,
 };
 
 export const LABEL_BOLD = {
   fontSize: scaleFont(14),
   fontFamily: 'Poppins-Bold',
   lineHeight: scaleFont(21),
+  includeFontPadding: false,
+};
+
+export const TITLE_H1 = {
+  fontFamily: 'Poppins-SemiBold',
+  fontSize: scaleFont(24),
+  lineHeight: scaleFont(36),
+  includeFontPadding: false,
 };
 
 export const TITLE_H2 = {
   fontFamily: 'Poppins-SemiBold',
   fontSize: scaleFont(18),
   lineHeight: scaleFont(27),
+  includeFontPadding: false,
 };
 
 export const TITLE_H3 = {
   fontFamily: 'Poppins-Regular',
   fontSize: scaleFont(16),
   lineHeight: scaleFont(24),
+  includeFontPadding: false,
+};
+
+export const PARAGRAPH = {
+  fontFamily: 'Poppins-Regular',
+  fontSize: scaleFont(12),
+  lineHeight: scaleFont(36),
+  includeFontPadding: false,
+};
+
+export const SMALL_PARAGRAPH = {
+  fontFamily: 'Poppins-Regular',
+  fontSize: scaleFont(10),
+  lineHeight: scaleFont(15),
+  includeFontPadding: false,
 };
