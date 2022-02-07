@@ -3,6 +3,7 @@ import MapView, { MapEvent, Marker } from 'react-native-maps';
 import React from 'react';
 import { UserI } from '~features/user/data/model/user';
 import images from '~features/user/assets/images';
+import { scaleWidth } from '~core/themes/mixins';
 
 type Props = {
   initLat: number;
@@ -31,6 +32,7 @@ const UserMapView = ({
       }}>
       {users.map(user => (
         <Marker
+          style={styles.marker}
           identifier={user.id.toString()}
           key={user.id}
           coordinate={{
@@ -48,6 +50,10 @@ const UserMapView = ({
 const styles = StyleSheet.create({
   map: {
     flexGrow: 1,
+  },
+  marker: {
+    width: scaleWidth(43),
+    height: scaleWidth(43),
   },
 });
 
